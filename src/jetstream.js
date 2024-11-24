@@ -57,7 +57,7 @@ export class JetStreamClient {
             time_us: metadata.time_us,
             post: {
                 author: likedPostAuthor[0],
-                id: likedPostID[0],
+                rkey: likedPostID[0],
             },
         };
     };
