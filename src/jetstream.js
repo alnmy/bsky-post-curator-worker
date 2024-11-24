@@ -64,7 +64,7 @@ export class JetStreamClient {
 
     async parsePost(data, metadata) {
         return {
-            type: (metadata.isRetraction) ? "create:post" : "delete:post",
+            type: (metadata.isRetraction) ? "delete:post" : "create:post",
             author: metadata.did_author,
             rkey: data.commit.rkey,
             time_us: metadata.time_us,
